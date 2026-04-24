@@ -41,7 +41,7 @@ These metrics span two endpoints:
 | `GET /v2/insights` | `avg_user_duration`, `unique_users_by_duration_timeframe`, `publishes_by_device_type`, `subscribers_by_device_type`, `unique_users_by_device_type` |
 | `GET /v2/insights/top` | `top_20_channels_with_user_duration`, `top_1000_channels_with_user_duration` |
 
-## Using the query_insights Tool
+## Using the insights Tool
 
 ### Average user duration (hourly)
 

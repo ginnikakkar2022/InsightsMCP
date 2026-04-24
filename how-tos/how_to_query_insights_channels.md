@@ -40,7 +40,7 @@ Channel metrics span two endpoints:
 | `GET /v2/insights` | `unique_channels`, `unique_channels_combination`, `percent_unique_channels_with_messages`, `channel_patterns` |
 | `GET /v2/insights/top` | `top_20_channels`, `top_1000_channels` |
 
-## Using the query_insights Tool
+## Using the insights Tool
 
 ### Unique channels per day
 

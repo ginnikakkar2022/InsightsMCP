@@ -37,7 +37,7 @@ All message metrics use the `GET /v2/insights` endpoint.
 |---|---|
 | `GET /v2/insights` | `messages`, `top_10_message_types`, `message_by_country` |
 
-## Using the query_insights Tool
+## Using the insights Tool
 
 ### Total messages per day
 

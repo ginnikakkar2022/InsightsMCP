@@ -12,7 +12,7 @@ requires:
   - pubnub account on Starter or Pro plan with Insights Premium
   - admin portal access with Owner or Account Admin role
 produces:
-  - insights_api_key — Service Integration API key with Insights Read scope
+  - Service Integration API key (si_...) with Insights Read scope. In the PubNub MCP this is stored in the existing PUBNUB_API_KEY environment variable — there is no separate INSIGHTS_API_KEY. Either add Insights Read to the Service Integration backing your current PUBNUB_API_KEY, or create a new Service Integration with Insights Read and rotate PUBNUB_API_KEY to it.
 ---
 
 # How to Get Insights API Access
@@ -36,13 +36,27 @@ Insights Premium is required for API access.
 
 To upgrade, open the [Admin Portal](https://admin.pubnub.com/#/insights), navigate to **Insights**, and select **Upgrade**.
 
-## Step 2: Create a Service Integration API Key
+## Step 2: Create or Update a Service Integration API Key
+
+The PubNub MCP uses a single Service Integration key (`PUBNUB_API_KEY`) for all admin
+tools (`manage_illuminate`, `insights`, etc.). You have two options:
+
+**Option A — Add Insights Read to your existing key (recommended).** Open the Service
+Integration that backs your current `PUBNUB_API_KEY` and add an Account-level
+**Insights — Read** permission row. The key value does not change.
+
+**Option B — Create a new Service Integration with Insights Read.** Then update
+`PUBNUB_API_KEY` (and any other places that store the key) to the new value.
+
+To create a new key:
 
 1. Sign in to the [Admin Portal](https://admin.pubnub.com/).
 2. Navigate to **Service Integrations** (account-level settings).
 3. Create a new API key.
-4. Grant the **Insights — Read** permission scope.
-5. Copy the generated API key (`si_...` format). Store it securely — it cannot be retrieved after creation.
+4. Grant the **Insights — Read** permission scope (plus any other scopes you also
+   need, e.g. Illuminate Read & Write for `manage_illuminate`).
+5. Copy the generated API key (`si_...` format). Store it securely as `PUBNUB_API_KEY`
+   in your environment or secrets manager — it cannot be retrieved after creation.
 
 | Permission Scope | Level | Access |
 |---|---|---|

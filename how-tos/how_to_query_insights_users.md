@@ -40,7 +40,7 @@ User metrics span two endpoints:
 | `GET /v2/insights` | `unique_users`, `unique_users_combination`, `new_vs_recurring_users`, `percent_unique_users_with_messages`, `unique_users_by_country` |
 | `GET /v2/insights/top` | `top_20_users`, `top_1000_users` |
 
-## Using the query_insights Tool
+## Using the insights Tool
 
 ### Unique users per day
 
