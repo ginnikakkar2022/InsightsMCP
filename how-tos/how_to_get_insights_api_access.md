@@ -53,10 +53,10 @@ To create a new key:
 1. Sign in to the [Admin Portal](https://admin.pubnub.com/).
 2. Navigate to Organization settings → API Management.
 3. Click **Create Service Integration** (account-level settings).
-5. Create a new API key.
-6. Grant the **Insights — Read** permission scope (plus any other scopes you also
+4. Create a new API key.
+5. Grant the **Insights — Read** permission scope (plus any other scopes you also
    need, e.g. Illuminate Read & Write for `manage_illuminate`).
-7. Copy the generated API key (`si_...` format). Store it securely as `PUBNUB_API_KEY`
+6. Copy the generated API key (`si_...` format). Store it securely as `PUBNUB_API_KEY`
    in your environment or secrets manager — it cannot be retrieved after creation.
 
 | Permission Scope | Level | Access |
